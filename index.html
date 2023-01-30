@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Plus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/submit" class="form">
+        <input type="text" placeholder="Find your city.." />
+        <input type="submit" value="Search" class="submitButton" />
+      </form>
+      <br />
+      <div class="row weatherInfo">
+        <div class="col currentWeatherSymbol">⛅</div>
+        <div class="col cityName">
+          <h1>Paris</h1>
+          <h6>Day Month year hour:minute</h6>
+          <div class="humidity">Humidity</div>
+          <div class="windSpeed">Wind Speed</div>
+        </div>
+        <div class="col currentTemperature">10°C <br /></div>
+      </div>
+      <br />
+      <div class="row futureForecast">
+        <div class="col dayOne">
+          Monday<br />
+          12°C<br />
+          <span class="symbol">☁️</span>
+        </div>
+        <div class="col dayTwo">
+          Tuesday<br />
+          9°C<br />
+          <span class="symbol">🌦️</span>
+        </div>
+        <div class="col dayThree">
+          Wednesday<br />
+          10°C<br />
+          <span class="symbol">🌩️</span>
+        </div>
+        <div class="col dayFour">
+          Thursday<br />
+          7°C<br />
+          <span class="symbol">🌦️</span>
+        </div>
+        <div class="col dayFive">
+          Friday<br />
+          10°C<br />
+          <span class="symbol">🌤️</span>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
