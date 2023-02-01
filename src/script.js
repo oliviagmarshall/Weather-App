@@ -32,7 +32,8 @@ function searchCity(city) {
     windSpeedDisplay.innerHTML = `Wind Speed:${windSpeed}mph`;
 
     let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute=("src", `openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   }
   
   let now = new Date();
