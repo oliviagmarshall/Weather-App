@@ -30,6 +30,9 @@ function searchCity(city) {
     let windSpeed = Math.round(response.data.wind.speed);
     let windSpeedDisplay = document.querySelector("div.windSpeed");
     windSpeedDisplay.innerHTML = `Wind Speed:${windSpeed}mph`;
+
+    let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute=("src", `openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   }
   
   let now = new Date();
