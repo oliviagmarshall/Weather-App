@@ -11,10 +11,6 @@ function searchCity(city) {
     searchCity(city);
   }
   
-  let searchForm = document.querySelector("form");
-  
-  searchForm.addEventListener("submit", handleSubmit);
-  
   function showWeatherInfo(response) {
     let h1 = document.querySelector("h1");
     h1.innerHTML = response.data.name;
@@ -35,6 +31,10 @@ function searchCity(city) {
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   }
+
+  let searchForm = document.querySelector("form");
+  
+  searchForm.addEventListener("submit", handleSubmit);
   
   let now = new Date();
   
