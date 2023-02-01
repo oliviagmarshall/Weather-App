@@ -40,6 +40,8 @@ function searchCity(city) {
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let year = now.getFullYear();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;}
   
   let days = [
     "Sunday",
