@@ -79,6 +79,6 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h6.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
+h6.innerHTML = `Last Updated:${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
 
 searchCity("Oslo");
