@@ -76,3 +76,4 @@ function searchCity(city) {
   
   h6.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
   
+  searchCity(London);
