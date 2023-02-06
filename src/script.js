@@ -16,7 +16,7 @@ function searchCity(city) {
     h1.innerHTML = response.data.name;
     
     let description= response.data.weather[0].description;
-    let descriptionDisplay=document.querySelector("#document");
+    let descriptionDisplay=document.querySelector("#description");
     descriptionDisplay.innerHTML=`${description}`;
     
     let temperature = Math.round(response.data.main.temp);
