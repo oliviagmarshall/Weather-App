@@ -14,7 +14,11 @@ function searchCity(city) {
   function showWeatherInfo(response) {
     let h1 = document.querySelector("h1");
     h1.innerHTML = response.data.name;
-  
+    
+    let description= response.data.weather[0].description;
+    let descriptionDisplay=document.querySelector("#document");
+    descriptionDisplay.innerHTML=`${description}`;
+    
     let temperature = Math.round(response.data.main.temp);
     let temperatureDisplay = document.querySelector("div.col.currentTemperature");
     temperatureDisplay.innerHTML = `${temperature}°C `;
@@ -76,4 +80,3 @@ function searchCity(city) {
   
   h6.innerHTML = `${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
   
-  searchCity(London);
