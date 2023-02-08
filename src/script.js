@@ -11,10 +11,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let searchForm = document.querySelector("form");
-
-searchForm.addEventListener("submit", handleSubmit);
-
 function showWeatherInfo(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
@@ -80,5 +76,9 @@ let months = [
 let month = months[now.getMonth()];
 
 h6.innerHTML = `Last Updated: ${day} ${date} ${month} ${year}, ${hours}:${minutes}`;
+
+let searchForm = document.querySelector("form");
+
+searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Oslo");
