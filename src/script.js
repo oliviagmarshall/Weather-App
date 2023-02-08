@@ -44,6 +44,8 @@ function displayForecast(){
   forecastElement.innerHTML="forecast";
 }
 
+displayForecast();
+
 let now = new Date();
 
 let h6 = document.querySelector("h6");
