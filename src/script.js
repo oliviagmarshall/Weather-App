@@ -50,8 +50,10 @@ let h6 = document.querySelector("h6");
 
 let date = now.getDate();
 let hours = now.getHours();
-let minutes = now.getMinutes();
 let year = now.getFullYear();
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;}
 
 let days = [
   "Sunday",
