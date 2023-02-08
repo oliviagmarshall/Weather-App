@@ -39,6 +39,11 @@ function showWeatherInfo(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(){
+  let forecastElement= document.querySelector("#forecast");
+  forecastElement.innerHTML="forecast";
+}
+
 let now = new Date();
 
 let h6 = document.querySelector("h6");
@@ -81,4 +86,5 @@ let searchForm = document.querySelector("form");
 
 searchForm.addEventListener("submit", handleSubmit);
 
+displayForecast();
 searchCity("Oslo");
