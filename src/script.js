@@ -86,5 +86,4 @@ let searchForm = document.querySelector("form");
 
 searchForm.addEventListener("submit", handleSubmit);
 
-displayForecast();
 searchCity("Oslo");
