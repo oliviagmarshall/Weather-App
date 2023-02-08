@@ -40,9 +40,14 @@ function showWeatherInfo(response) {
 }
 
 function displayForecast(){
-  let forecastElement= document.querySelector("#forecast");
+  let forecastElement= document.querySelector("div.weather-forecast-date");
   forecastElement.innerHTML="forecast";
 }
+
+displayForecast();
+
+if (minutes < 10) {
+  minutes = `0${minutes}`;}
 
 let now = new Date();
 
