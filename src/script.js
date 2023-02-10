@@ -46,9 +46,6 @@ function displayForecast(){
 
 displayForecast();
 
-if (minutes < 10) {
-  minutes = `0${minutes}`;}
-
 let now = new Date();
 
 let h6 = document.querySelector("h6");
