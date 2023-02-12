@@ -39,12 +39,34 @@ function showWeatherInfo(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function displayForecast(){
-  let forecastElement= document.querySelector("div.weather-forecast-date");
-  forecastElement.innerHTML="forecast";
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+  <div class="weather-forecast-date">Monday</div>
+  <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42"/>
+  <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max"> 12°C</span>
+    <span class="weather-forecast-temperature-min"> 8°C</span>
+  </div>
+</div>
+</div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-2">
+  <div class="weather-forecast-date">Monday</div>
+  <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42"/>
+  <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max"> 12°C</span>
+    <span class="weather-forecast-temperature-min"> 8°C</span>
+  </div>
+</div>
+</div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
 
 let now = new Date();
 
@@ -91,3 +113,4 @@ let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Oslo");
+displayForecast();
