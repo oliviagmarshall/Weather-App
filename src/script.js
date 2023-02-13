@@ -11,6 +11,11 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function getForecast(coordinates) {
+  let apiKey = "57b2c40fdae71a6ba41d72685e3226e2";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}appid=${apiKey}&units=metric`;
+}
+
 function showWeatherInfo(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
@@ -37,6 +42,8 @@ function showWeatherInfo(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function displayForecast() {
