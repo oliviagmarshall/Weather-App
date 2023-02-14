@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheCodes Plus</title>
+    <title>Lo-Fi Weather App</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="container">
-      <form action="/submit" class="form">
+      <form action="submit" class="form">
         <input type="text" placeholder="Find your city.." />
         <input type="submit" value="Search" class="submitButton" />
       </form>
@@ -30,7 +30,7 @@
         <div class="col currentWeatherSymbol">
           <img src="" id="icon" />
         </div>
-        <div class="col cityName">
+        <div class="col cityInfo">
           <h1></h1>
           <h6>Day Month year hour:minute</h6>
           <div id="description"></div>
@@ -40,9 +40,14 @@
         <div class="col currentTemperature"><br /></div>
       </div>
       <br />
-      <div class="futureForecast"  id="forecast">
-    </div>
-    <p class="footer">Open-source code by <a href="https://github.com/oliviagmarshall" target="_blank">Olivia Marshall</a></p>
+      <div class="futureForecast" id="forecast"></div>
+      <br/>
+    <p class="footer">
+      Open-source code by
+      <a href="https://github.com/oliviagmarshall" target="_blank"
+        >Olivia Marshall</a
+      >
+    </p>
     <script src="src/script.js"></script>
   </body>
 </html>
